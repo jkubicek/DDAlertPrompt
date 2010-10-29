@@ -43,6 +43,7 @@
 		tableView_.opaque = NO;
 		tableView_.layer.cornerRadius = 3.0f;
 		tableView_.editing = YES;
+		tableView_.rowHeight = 28.0f;
 		[self addSubview:tableView_];
 								
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];        
@@ -64,15 +65,14 @@
 #pragma mark layout
 
 - (void)layoutSubviews {
-	self.tableView.rowHeight = 28.0f;
-	self.tableView.frame = CGRectMake(12.0f, 51.0f, 260.0f, 56.0f);		
-
 	// We assume keyboard is on.
 	if ([[UIDevice currentDevice] isGeneratingDeviceOrientationNotifications]) {
 		if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
-			self.center = CGPointMake(160.0f, (480.0f - 216.0f)/2);
+			self.center = CGPointMake(160.0f, (460.0f - 216.0f)/2 + 12.0f);
+			self.tableView.frame = CGRectMake(12.0f, 51.0f, 260.0f, 56.0f);		
 		} else {
-			self.center = CGPointMake(240.0f, (320.0f - 162.0f)/2 - 20.0f);
+			self.center = CGPointMake(240.0f, (300.0f - 162.0f)/2 + 12.0f);
+			self.tableView.frame = CGRectMake(12.0f, 35.0f, 260.0f, 56.0f);		
 		}
 	}
 }
