@@ -67,7 +67,7 @@
 - (void)layoutSubviews {
 	// We assume keyboard is on.
 	if ([[UIDevice currentDevice] isGeneratingDeviceOrientationNotifications]) {
-		if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
+		if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
 			self.center = CGPointMake(160.0f, (460.0f - 216.0f)/2 + 12.0f);
 			self.tableView.frame = CGRectMake(12.0f, 51.0f, 260.0f, 56.0f);		
 		} else {
