@@ -23,11 +23,18 @@
 @synthesize plainTextField = plainTextField_;
 @synthesize secretTextField = secretTextField_;
 
+/*
+-(BOOL)_needsKeyboard {
+	// Private API hack by @0xced (Cedric Luthi) for keyboard responder issue: http://twitter.com/0xced/status/29067229352
+	return [UIDevice instancesRespondToSelector:@selector(isMultitaskingSupported)];
+}
+*/
+
 - (id)initWithTitle:(NSString *)title delegate:(id /*<UIAlertViewDelegate>*/)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitle:(NSString *)otherButtonTitles {
 
 	if ((self = [super initWithTitle:title message:@"\n\n\n" delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles, nil])) {
-		// If you uncomment below, UITextFields in tableview will show characters when typing.
-		[self addSubview:self.plainTextField];
+		// FIXME: If you uncomment below, UITextFields in tableview will show characters when typing (keyboard reponder issue).
+		//[self addSubview:self.plainTextField];
 
 		tableView_ = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
 		tableView_.delegate = self;
