@@ -88,7 +88,6 @@
 	if (!plainTextField_) {
 		plainTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(5.0f, 0.0f, 255.0f, 28.0f)];
 		plainTextField_.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-		plainTextField_.delegate = self;
 		plainTextField_.clearButtonMode = UITextFieldViewModeWhileEditing;
 		plainTextField_.placeholder = @"Nickname or Email";
 	}
@@ -100,7 +99,6 @@
 	if (!secretTextField_) {
 		secretTextField_ = [[UITextField alloc] initWithFrame:CGRectMake(5.0f, 0.0f, 255.0f, 28.0f)];
 		secretTextField_.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-		secretTextField_.delegate = self;
 		secretTextField_.secureTextEntry = YES;
 		secretTextField_.clearButtonMode = UITextFieldViewModeWhileEditing;
 		secretTextField_.placeholder = @"Password";
