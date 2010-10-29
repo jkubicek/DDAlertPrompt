@@ -25,7 +25,7 @@
 
 /*
 -(BOOL)_needsKeyboard {
-	// Private API hack by @0xced (Cedric Luthi) for keyboard responder issue: http://twitter.com/0xced/status/29067229352
+	// Private API hack by @0xced (Cedric Luthi) for possible keyboard responder issue: http://twitter.com/0xced/status/29067229352
 	return [UIDevice instancesRespondToSelector:@selector(isMultitaskingSupported)];
 }
 */
@@ -33,8 +33,8 @@
 - (id)initWithTitle:(NSString *)title delegate:(id /*<UIAlertViewDelegate>*/)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitle:(NSString *)otherButtonTitles {
 
 	if ((self = [super initWithTitle:title message:@"\n\n\n" delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles, nil])) {
-		// FIXME: If you uncomment below, UITextFields in tableview will show characters when typing (keyboard reponder issue).
-		//[self addSubview:self.plainTextField];
+		// FIXME: This is a workaround. By uncomment below, UITextFields in tableview will show characters when typing (possible keyboard reponder issue).
+		[self addSubview:self.plainTextField];
 
 		tableView_ = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
 		tableView_.delegate = self;
@@ -106,12 +106,6 @@
 		secretTextField_.placeholder = @"Password";
 	}
 	return secretTextField_;
-}
-
-#pragma mark UITextFieldDelegate
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    return YES;
 }
 
 #pragma mark UITableViewDataSource & UITableViewDelegate

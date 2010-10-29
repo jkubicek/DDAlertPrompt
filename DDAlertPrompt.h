@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DDAlertPrompt : UIAlertView <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> {
+@interface DDAlertPrompt : UIAlertView <UITableViewDelegate, UITableViewDataSource> {
 	@private
 	UITableView *tableView_;
 	UITextField *plainTextField_;
