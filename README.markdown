@@ -28,16 +28,20 @@ but if you don't want to use private api, you can try:
 
 And according to Apple DTS (this cause one ticket, btw):
 
+> On Nov 1, 2010, at 1:56 PM, Apple Developer Technical Support wrote:  
+
 > Thank you for your inquiry to Apple Worldwide Developer Technical Support.
 
 > UIAlertView isn't really well equipped to handle custom subviews, and is instead intended to be used "as is".  Additionally, there is the potential danger that if the subview hierarchy for UIAlertView changes in the future, applications that add their own subviews to UIAlertView could break.  In this case, my guess is that there may be some sort of conflict between your UITableView and the underlying UITableView that UIAlertView may create/use automatically in some situations.
 
 > The general recommended approach is to use a modal view controller that resembles an alert view if it is serving the same sort of purpose.  It's not uncommon to want more customization for UIAlertView, however, so please feel free to log a request at http://developer.apple.com/bugreporter to let iOS engineering know that you're being impacted by this.
 
-> Dxxxxx Yx
+> Dxxxxx Yx  
 > DTS Engineer, Apple Worldwide Developer Relations
 
-This is not a good use for subclassing UIAlertView, please be informed.
+This is not a good use of UIAlertView subclassing, please be informed.
+
+And this bug is filed under [radar://8617447][3].
 
 ## Compare
 
@@ -96,3 +100,4 @@ DDAlertPrompt is licensed under MIT license.
 
 [1]: http://twitter.com/0xced/status/29073823461
 [2]: http://github.com/0xced
+[3]: radar://8617447
