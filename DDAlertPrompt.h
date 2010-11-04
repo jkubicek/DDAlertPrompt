@@ -1,10 +1,9 @@
 //
 //  DDAlertPrompt.h
-//  DDAlertPrompt
+//  DDAlertPrompt (Released under MIT License)
 //
 //  Created by digdog on 10/27/10.
-//  Copyright 2010 Ching-Lan 'digdog' HUANG. All rights reserved.
-//  http://digdog.tumblr.com
+//  Copyright 2010 Ching-Lan 'digdog' HUANG. http://digdog.tumblr.com
 //
 //  Permission is hereby granted, free of charge, to any person obtaining
 //  a copy of this software and associated documentation files (the

@@ -96,7 +96,7 @@ And get the text from <code>-alertView:willDismissWithButtonIndex:</code> UIAler
 
 ## License
 
-DDAlertPrompt is licensed under MIT license.
+DDAlertPrompt is released under MIT license.
 
 [1]: http://twitter.com/0xced/status/29073823461
 [2]: http://github.com/0xced
