@@ -26,6 +26,8 @@ but if you don't want to use private api, you can try:
     // FIXME: If you uncomment below, UITextFields in tableview will show characters when typing (keyboard reponder issue).
     [self addSubview:self.plainTextField];
 
+### Feedback from DTS
+
 And according to Apple DTS (this cause one ticket, btw):
 
 > On Nov 1, 2010, at 1:56 PM, Apple Developer Technical Support wrote:  
@@ -42,6 +44,20 @@ And according to Apple DTS (this cause one ticket, btw):
 This is not a good use of UIAlertView subclassing, please be informed.
 
 And this bug is filed under [radar://8617447][3].
+
+### Update from Apple: It's an Known Issue.
+
+> On Nov 17, 2010, at 4:34 PM, devbugs@apple.com wrote:
+
+> This is a follow up to Bug ID# [8617447][3].  After further investigation it has been determined that this is a known issue, which is currently being investigated by engineering.  This issue has been filed in our bug database under the original Bug ID# [8639186][4]. The original bug number being used to track this duplicate issue can be found in the State column, in this format:  Duplicate/OrigBug#.
+
+> Thank you for submitting this bug report. We truly appreciate your assistance in helping us discover and isolate bugs. 
+
+> Best Regards,
+
+> Pxxxxxk Cxxxxxs
+> Apple Developer Connection 
+> Worldwide Developer Relations
 
 ## Compare
 
@@ -101,3 +117,4 @@ DDAlertPrompt is released under MIT license.
 [1]: http://twitter.com/0xced/status/29073823461
 [2]: http://github.com/0xced
 [3]: radar://8617447
+[4]: radar://8639186
