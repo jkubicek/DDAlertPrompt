@@ -55,9 +55,9 @@ And this bug is filed under [radar://8617447][3].
 
 > Best Regards,
 
-> Pxxxxxk Cxxxxxs
-> Apple Developer Connection 
-> Worldwide Developer Relations
+> Pxxxxxk Cxxxxxs  
+> Apple Developer Connection   
+> Worldwide Developer Relations  
 
 ## Compare
 
