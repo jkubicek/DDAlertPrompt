@@ -1,7 +1,7 @@
 # DDAlertPrompt for iOS
 DDAlertPrompt is an UIAlertView subclass provides UITextFields for user/password inputs
 
-![](http://github.com/digdog/DDAlertPrompt/raw/master/Screenshots/portrait.png)
+![](https://github.com/digdog/DDAlertPrompt/raw/master/Screenshots/portrait.png)
 
 ## Features
 
@@ -106,9 +106,9 @@ And get the text from <code>-alertView:willDismissWithButtonIndex:</code> UIAler
 
 ## Screenshots
 
-![](http://github.com/digdog/DDAlertPrompt/raw/master/Screenshots/portrait.png)  
+![](https://github.com/digdog/DDAlertPrompt/raw/master/Screenshots/portrait.png)  
 
-![](http://github.com/digdog/DDAlertPrompt/raw/master/Screenshots/landscape.png)
+![](https://github.com/digdog/DDAlertPrompt/raw/master/Screenshots/landscape.png)
 
 ## License
 
